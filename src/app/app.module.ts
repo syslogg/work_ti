@@ -7,12 +7,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './components/app.component';
 import { ContentComponent } from './components/content.component';
 import { HeaderComponent } from "./components/header.component";
+import { FooterComponent } from "./components/footer.component";
+import { MenuComponent } from "./components/menu.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,6 @@ import { HeaderComponent } from "./components/header.component";
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
