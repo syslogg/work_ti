@@ -1,6 +1,15 @@
 <section class="site-root layout-fluid">
+    <div class="layout-row">
+        <app-menu></app-menu>
+    </div>
     <app-header></app-header>
-    <app-menu></app-menu>
-    <content-comp></content-comp>
+    <section class="layout-row">
+        <section class="layout-md-8">
+            <app-content></app-content>
+        </section>
+        <aside class="layout-md-4">
+            <app-sidebar></app-sidebar>
+        </aside>
+    </section>
     <app-footer></app-footer>
 </section>

@@ -1,0 +1,24 @@
+{
+  "name": "work_ti",
+  "description": "Trabalho de TI",
+  "main": "index.html",
+  "authors": [
+    "Hendy Rodrigues F. Silva <mr.syslogg@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "package"
+  ],
+  "homepage": "https://github.com/syslogg/work_ti",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "normalize.css#^7.0.0"
+  }
+}
