@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./../styles/app.component.css']
 })
 export class ContentComponent {
-  content = 'content work Componente!!';
+  content = 'content work Componentew!!';
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SideBarModel } from './../../infrastructure/models/sidebar.model';
+import { FeatureModel } from './../../infrastructure/models/feature.model';
 
 @Component({
     selector: 'app-feature',
@@ -9,11 +9,15 @@ import { SideBarModel } from './../../infrastructure/models/sidebar.model';
 
 export class FeatureComponent {
 
-    nome : string;
-
-    content : string;
+    features : FeatureModel[];
 
     constructor() {
+        this.features = [
+            new FeatureModel('titulo 1','conteudo 1'),
+            new FeatureModel('titulo 2', 'conteudo 2'),
+            new FeatureModel('titulo 3', 'conteudo 3'),
+            new FeatureModel('titulo 4', 'conteudo 4')
+        ];
         
     }
 }
