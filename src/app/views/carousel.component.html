@@ -1,6 +1,8 @@
-<section>
-    <div>
-        <img src="https://www.w3schools.com/css/trolltunga.jpg" />
-        <a href="#">Text</a>
-    </div>
+<section class="carousel" (mouseenter)="pause()">
+    <ol>
+        <li *ngFor="let slidez of slides" (click)="select(slidez)" [class.active]="slidez.active === true" class="carousel-block" [hidden]="slides.length <= 1" ></li>
+    </ol>
 </section>
+
+<!-- <img src="https://www.w3schools.com/css/trolltunga.jpg" />
+            <a href="#" class="carousel-text">Text 1</a> -->

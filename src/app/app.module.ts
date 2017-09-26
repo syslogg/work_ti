@@ -10,7 +10,8 @@ import { FooterComponent } from "./components/footer.component";
 import { MenuComponent } from "./components/menu.component";
 import { SidebarComponent } from "./components/sidebar.component";
 import { FeatureComponent } from "./components/feature.component";
-import { CarouselComponent } from "./components/carousel.component";
+import { BlockFeatureComponent } from './components/block.feature.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CarouselComponent } from "./components/carousel.component";
     FooterComponent,
     SidebarComponent,
     FeatureComponent,
-    CarouselComponent
+    BlockFeatureComponent
   ],
   imports: [
     BrowserModule,

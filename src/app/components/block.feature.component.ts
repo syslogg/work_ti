@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-carouasel',
-  templateUrl: './../views/carousel.component.html',
+  selector: 'app-block-feature',
+  templateUrl: './../views/block.feature.component.html',
   styleUrls: ['./../styles/app.component.css']
 })
-export class CarouselComponent {
+export class BlockFeatureComponent {
   title = 'app works!';
 }
