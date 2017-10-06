@@ -13,10 +13,8 @@ export class FeatureComponent {
 
     constructor() {
         this.features = [
-            new FeatureModel('titulo 1','conteudo 1'),
-            new FeatureModel('titulo 2', 'conteudo 2'),
-            new FeatureModel('titulo 3', 'conteudo 3'),
-            new FeatureModel('titulo 4', 'conteudo 4')
+            new FeatureModel('Depoimentos','conteudo 1'),
+            new FeatureModel('Noticias', 'conteudo 2')
         ];
         
     }
