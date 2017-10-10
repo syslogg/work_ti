@@ -9,6 +9,12 @@
 .logo h1 { font-size:5em; font-weight: bold; }
 .logo a { color:#fff; }
 
+.content { margin-bottom:10px; border-bottom:2px dashed #ccc; padding-bottom:15px;}
+.content .content-title { padding:0; margin:10px 0; }
+.content .content-body { width:50%; float:right; }
+.content .content-body p:first-child { margin-top:0 !important; }
+.content .content-feature { width:47%; float:left; }
+
 .footer-top { background:#282828; color:white;  padding:10px;}
 .footer-top ul { margin:0; }
 .footer-top a { color:white; font-size:0.8em; } 
