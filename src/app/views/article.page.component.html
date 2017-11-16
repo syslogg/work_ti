@@ -1,0 +1,64 @@
+<section class="layout-row">
+    <section class="layout-md-12 card-one content-main">
+        <article *ngIf="post">
+            <header>
+                <h1 style="margin-bottom:10px;">{{post.title}}</h1>
+                <h5 style="margin-top:0; font-style:italic; font-weight:regular;">{{post.subtitle}}</h5>
+            </header>
+            <div>
+                {{post.body}}
+            </div>
+            <footer class="author clearfix card-two">
+                <div class="clearfix">
+                    <div class = "author-photo">
+                        <img [src]="post.author.photo">
+                    </div>
+                    <div class="author-name">
+                        <a [href]="'mailto:'+post.author.email"><h1>{{post.author.fullName}}</h1></a>
+                        
+                    </div>
+                </div>
+                <div>
+                    {{post.author.biography}}
+                </div>
+            </footer>
+            <section class = "comment">
+                <header class="comment-header">
+                    <h2>Comentários</h2>
+                </header>
+                <div>
+                    <ul class="list list-hover" *ngFor="let cmt of post.comments">
+                        <li class="card-one" style="margin-bottom:7px;">
+                            <strong class="font-xx list-title"><a style="color:#333" [href]="'mailto:'+cmt.email">{{cmt.fullName}}</a></strong><br/>
+                            <span class="list-subtitle">{{cmt.body}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <section class="comment-form">
+                    <header><h2 class="font-x">Faça seu comentário!</h2></header>
+                    <form class="form">
+                            <input type="text" placeholder="Nome completo" />
+                            <input type="text" placeholder="E-mail" />
+                            <textarea placeholder="Seu comentário!"></textarea>
+                            <button type="submit" class="btn">Enviar</button>
+                            <button type="reset" class="btn">Limpar</button>
+                    </form>
+                </section>
+            </section>
+        </article>
+        <section class="feature-article clearfix">
+            <div class="layout-s-4 card-one feature-article-item">
+                <img width="100%" height="" src="http://www.techfume.com/wp-content/uploads/2010/07/google.jpg"/>
+                <strong>Texto</strong>
+            </div>
+            <div class="layout-s-4 card-one feature-article-item">
+                <img width="100%" height="" src="http://www.techfume.com/wp-content/uploads/2010/07/google.jpg"/>
+                <strong>Texto</strong>
+            </div>
+            <div class="layout-s-4 card-one feature-article-item">
+                <img width="100%" height="" src="http://www.techfume.com/wp-content/uploads/2010/07/google.jpg"/>
+                <strong>Texto</strong>
+            </div>
+        </section>
+    </section>
+</section>

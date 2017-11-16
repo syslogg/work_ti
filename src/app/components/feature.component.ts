@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FeatureModel } from './../../infrastructure/models/feature.model';
+import { SideBarFeature } from "../../domain/SideBarFeature";
+import { SideBarFeatureService } from "../services/sidebarfeature.service";
 
 @Component({
     selector: 'app-feature',
@@ -9,13 +11,9 @@ import { FeatureModel } from './../../infrastructure/models/feature.model';
 
 export class FeatureComponent {
 
-    features : FeatureModel[];
+    features : SideBarFeature[];
 
-    constructor() {
-        this.features = [
-            new FeatureModel('Depoimentos','conteudo 1'),
-            new FeatureModel('Noticias', 'conteudo 2')
-        ];
-        
+    constructor(private _sideBarService : SideBarFeatureService) {
+        _sideBarService.getAll().subscribe((data : SideBarFeature[]) => { this.features = data });
     }
 }

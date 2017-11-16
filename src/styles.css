@@ -2,6 +2,8 @@
 body { background:rgb(240, 240, 240); }
 .layout-row {margin:0 !important}
 
+.form textarea { height: 100px; }
+
 /* TODO: FRAMEWORK */
 .layout-full {
     margin:0 !important;
