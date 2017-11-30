@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Post } from "../../domain/post";
+import { PostService } from 'app/services/post.service';
+import { Subscription } from "rxjs/Rx";
 
 @Component({
   selector: 'app-home-page',
@@ -7,7 +10,6 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
-  constructor() {
 
-  }
+  
 }

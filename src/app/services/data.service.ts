@@ -7,9 +7,8 @@ import { Observable } from 'rxjs';
 export class DataService<T> {
     
     private resultado : Object;
-    protected static urlApi : string = "http://localhost/WebApi/api/";
+    protected static urlApi : string = "http://localhost/WebApi/api";
     private resource : string;
-    protected params : string[] = [];
 
 
     constructor(private _http : HttpClient){
@@ -23,7 +22,22 @@ export class DataService<T> {
         return this._http.get<T>(DataService.urlApi+"/"+this.resource+"/"+id);
     }
 
+    public create(entity : T) : Observable<T>{
+        return this._http.post<T>(DataService.urlApi, entity);
+    }
+
     protected setResource(resource : string) : void {
         this.resource = resource;
+    }
+
+    protected getResource(params : string[]) : string {
+        let url = DataService.urlApi+"/"+this.resource;
+        
+        for(let val of params) {
+            url+= "/";
+            url+=val;
+        }
+
+        return url;
     }
 }

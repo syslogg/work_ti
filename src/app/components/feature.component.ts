@@ -14,6 +14,6 @@ export class FeatureComponent {
     features : SideBarFeature[];
 
     constructor(private _sideBarService : SideBarFeatureService) {
-        _sideBarService.getAll().subscribe((data : SideBarFeature[]) => { this.features = data });
+        //_sideBarService.getAll().subscribe((data : SideBarFeature[]) => { this.features = data });
     }
 }

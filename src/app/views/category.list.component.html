@@ -1,0 +1,8 @@
+<section class="feature" *ngIf="categories">
+    <header class="feature-header">
+        <h1 class="feature-title">Assuntos</h1>
+    </header>
+    <ul class="list category" *ngFor="let category of categories">
+        <li><a href="#">{{category.name}}</a></li>
+    </ul>
+</section>

@@ -1,6 +1,7 @@
-export class SideBarFeature {
+import { Entity } from './entity';
 
-    id : number;
+export class SideBarFeature extends Entity{
+
     title : string;
     body : string;
 

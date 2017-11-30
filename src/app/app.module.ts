@@ -13,19 +13,26 @@ import { MenuComponent } from "./components/menu.component";
 import { SidebarComponent } from "./components/sidebar.component";
 import { FeatureComponent } from "./components/feature.component";
 import { BlockFeatureComponent } from './components/block.feature.component';
+import { CategoryListComponent } from './components/categorylist.component';
+import { ArticleFormComponent } from "./components/article.form.component";
 
 import { HomePageComponent } from './components/home.page.component';
 import { ContactPageComponent } from './components/contact.page.component';
 import { ArticlePageComponent } from "./components/article.page.component";
+import { AllArticlePageComponent } from './components/all.article.page.component';
+import { ManagePageComponent } from './components/manage.page.component';
 
 import { DataService } from "./services/data.service";
 import { SideBarFeatureService } from "./services/sidebarfeature.service";
 import { PostService } from "./services/post.service";
+import { CategoryService } from "./services/category.service";
 
 const appRoutes = [
   {path: 'contato', component: ContactPageComponent},
   {path: 'article/:id', component: ArticlePageComponent},
-  {path: '', component: HomePageComponent}
+  {path: '', component: HomePageComponent},
+  {path: 'article',component: AllArticlePageComponent},
+  {path: 'manage', component: ManagePageComponent }
 ]
 
 @NgModule({
@@ -38,9 +45,14 @@ const appRoutes = [
     SidebarComponent,
     FeatureComponent,
     BlockFeatureComponent,
+    CategoryListComponent,
+    ArticleFormComponent,
+
     HomePageComponent,
     ContactPageComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
+    AllArticlePageComponent,
+    ManagePageComponent
 
   ],
   imports: [
@@ -50,7 +62,7 @@ const appRoutes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes, { enableTracing: false })
   ],
-  providers: [DataService, SideBarFeatureService, PostService],
+  providers: [DataService, SideBarFeatureService, PostService, CategoryService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

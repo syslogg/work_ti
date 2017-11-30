@@ -36,10 +36,10 @@
                 </div>
                 <section class="comment-form">
                     <header><h2 class="font-x">Faça seu comentário!</h2></header>
-                    <form class="form">
-                            <input type="text" placeholder="Nome completo" />
-                            <input type="text" placeholder="E-mail" />
-                            <textarea placeholder="Seu comentário!"></textarea>
+                    <form class="form" (ngSubmit)="submitComment()">
+                            <input type="text" name="fullname" [(ngModel)]="commentModel.fullname" placeholder="Nome completo" />
+                            <input type="text" name="email" [(ngModel)]="commentModel.email" placeholder="E-mail" />
+                            <textarea placeholder="Seu comentário!" name="body" [(ngModel)]="commentModel.body"></textarea>
                             <button type="submit" class="btn">Enviar</button>
                             <button type="reset" class="btn">Limpar</button>
                     </form>

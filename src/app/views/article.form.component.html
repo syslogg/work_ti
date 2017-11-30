@@ -1,0 +1,13 @@
+<header><h1>Nova postagem</h1></header>
+<section>
+    <section class="alerts">
+        <section [ngClass]="'alert ' + alertClass + ' alert-border'">{{alertMsg}}</section>
+    </section>
+    <form class="form">
+        <input type="text" [(ngModel)]="post.title" placeholder="Titulo"/>
+        <textarea placeholder="Sub-titulo"></textarea>
+        <textarea placeholder="Corpo da postagem"></textarea>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="reset" class="btn btn-danger">Limpar</button>
+    </form>
+</section> 

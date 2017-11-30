@@ -1,4 +1,5 @@
 import { Post } from './post';
+import { Entity } from './entity';
 
 export enum LevelAccess{
     Administrator = 1,
@@ -6,7 +7,7 @@ export enum LevelAccess{
     BossEditor = 3 
 }
 
-export class Author {
+export class Author extends Entity {
     public fullname : string;
     public email : string;
     public password : string;

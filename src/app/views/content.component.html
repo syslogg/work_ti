@@ -1,27 +1,14 @@
-<article class="content clearfix">
-    <h1 class="content-title">O melhor para seu negócio</h1>
-    <img class="content-feature layout-md-6" src="https://www.worcester.ac.uk/content_images/web-development-university-worcester-course-page-header.jpg" />
-    <div class="content-body layout-md-6">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum magna mauris, 
-            aliquet vel sem id, molestie venenatis quam. Quisque pellentesque velit non arcu 
-            pretium, nec lobortis magna blandit. In vulputate odio eget ligula bibendum interdum. 
-            Sed placerat quis sem eget malesuada. Pellentesque fermentum erat vel tempor feugiat. 
-        </p>
-    </div>
-    
-</article>
+<div *ngIf="_posts">
+    <article *ngFor="let post of _posts" class="content clearfix">
+        <h1 class="content-title"><a routerLink="/article/{{post.id}}">{{post.title}}</a></h1>
+        <img class="content-feature layout-md-6" [src]="post.imageUrl" />
+        <div class="content-body layout-md-6">
+            <p>
+                {{post.subtitle}}
+            </p>
+        </div>
+        
+    </article>
+</div>
 
-<article class="content clearfix">
-    <h1 class="content-title">O melhor para seu negócio</h1>
-    <img class="content-feature layout-md-6" src="https://www.worcester.ac.uk/content_images/web-development-university-worcester-course-page-header.jpg" />
-    <div class="content-body layout-md-6">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum magna mauris, 
-            aliquet vel sem id, molestie venenatis quam. Quisque pellentesque velit non arcu 
-            pretium, nec lobortis magna blandit. In vulputate odio eget ligula bibendum interdum. 
-            Sed placerat quis sem eget malesuada. Pellentesque fermentum erat vel tempor feugiat. 
-        </p>
-    </div>
-    
-</article>
+

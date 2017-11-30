@@ -11,8 +11,10 @@
 
 .content { margin-bottom:10px; border-bottom:2px dashed #ccc; padding-bottom:15px;}
 .content .content-title { padding:0; margin:10px 0; }
+.content .content-title a { color:#282828; }
 /*.content .content-body { width:50%; float:right; }*/
 .content .content-body p:first-child { margin-top:0 !important; }
+.content .content-feature { height:150px; }
 /* .content .content-feature { width:47%; float:left; } */
 
 .footer-top { background:#282828; color:white;  padding:10px;}
