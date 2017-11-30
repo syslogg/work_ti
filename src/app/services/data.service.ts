@@ -23,7 +23,15 @@ export class DataService<T> {
     }
 
     public create(entity : T) : Observable<T>{
-        return this._http.post<T>(DataService.urlApi, entity);
+        return this._http.post<T>(DataService.urlApi + "/" + this.resource + "/", entity);
+    }
+
+    public update(id : string | number, entity : T) : Observable<T>{
+        return this._http.put<T>(DataService.urlApi + "/" + this.resource + "/" + id, entity);
+    }
+
+    public delete(id : string | number) : Observable<T> {
+        return this._http.delete<T>(DataService.urlApi+"/"+this.resource+"/"+id);
     }
 
     protected setResource(resource : string) : void {

@@ -26,13 +26,15 @@ import { DataService } from "./services/data.service";
 import { SideBarFeatureService } from "./services/sidebarfeature.service";
 import { PostService } from "./services/post.service";
 import { CategoryService } from "./services/category.service";
+import { AuthorService } from 'app/services/author.service';
 
 const appRoutes = [
   {path: 'contato', component: ContactPageComponent},
   {path: 'article/:id', component: ArticlePageComponent},
   {path: '', component: HomePageComponent},
   {path: 'article',component: AllArticlePageComponent},
-  {path: 'manage', component: ManagePageComponent }
+  {path: 'manage', component: ManagePageComponent },
+  {path: 'manage/:id', component: ManagePageComponent }
 ]
 
 @NgModule({
@@ -62,7 +64,7 @@ const appRoutes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes, { enableTracing: false })
   ],
-  providers: [DataService, SideBarFeatureService, PostService, CategoryService],
+  providers: [DataService, SideBarFeatureService, PostService, CategoryService, AuthorService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

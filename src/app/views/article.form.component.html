@@ -1,12 +1,21 @@
 <header><h1>Nova postagem</h1></header>
 <section>
-    <section class="alerts">
-        <section [ngClass]="'alert ' + alertClass + ' alert-border'">{{alertMsg}}</section>
+    <section class="alerts" *ngIf="!isEmptyOrSpaces(alertMsg)">
+        <section class="alert {{alertClass}} alert-border">{{alertMsg}}</section>
     </section>
-    <form class="form">
-        <input type="text" [(ngModel)]="post.title" placeholder="Titulo"/>
-        <textarea placeholder="Sub-titulo"></textarea>
-        <textarea placeholder="Corpo da postagem"></textarea>
+    <form class="form" (ngSubmit)="submit()">
+        <input type="text" name="title" [(ngModel)]="postModel.title" placeholder="Titulo"/>
+
+        <select name="categoryId" [(ngModel)]="postModel.categoryId">
+            <option [ngValue]="category.id" *ngFor="let category of categories">{{category.name}}</option>
+        </select>
+
+        <select name="authorId" [(ngModel)]="postModel.authorId">
+            <option [ngValue]="author.id" *ngFor="let author of authors">{{author.fullName}}</option>
+        </select>
+        
+        <textarea [(ngModel)]="postModel.subtitle" name="subtitle" placeholder="Sub-titulo"></textarea>
+        <textarea [(ngModel)]="postModel.body" name="body" placeholder="Corpo da postagem"></textarea>
         <button type="submit" class="btn btn-success">Enviar</button>
         <button type="reset" class="btn btn-danger">Limpar</button>
     </form>
