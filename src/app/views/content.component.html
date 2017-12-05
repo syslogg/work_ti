@@ -6,6 +6,10 @@
             <p>
                 {{post.subtitle}}
             </p>
+            <div>
+                <a routerLink="/manage/{{post.id}}">Editar</a> | 
+                <button href="#" (click)="deletePost(post.id)">Deletar</button>
+            </div>
         </div>
         
     </article>

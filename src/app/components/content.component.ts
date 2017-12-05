@@ -29,4 +29,22 @@ export class ContentComponent implements OnInit{
     this._subsGetAllPost.unsubscribe();
   }
 
+  deletePost (idPost : number | string) : void {
+    console.log(idPost);
+    this._postService.delete(idPost).subscribe(data => {
+    alert("Excluido com sucesso");
+      let postDeleted;
+      
+      for(let post in this._posts) {
+        if(this._posts[post].id == idPost){
+          postDeleted = post;
+          break;
+        }
+      }
+      this._posts.splice(postDeleted,1);
+
+
+   });
+  }
+
 }
